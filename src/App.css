@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700;900&family=MuseoModerno:wght@300;400;600;700;900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 .news {
   background: #0c0a41;
   padding: 30px 0 30px 0;
@@ -10,16 +9,70 @@
 .row{
   --bs-gutter-x: 0rem !important;
 }
-/* .dropdown {
+.modal{
+  --bs-modal-bg:blue !important;
+  color:white;
+}
+.modal-content{
+  border-radius: 20px !important;
+  padding: 20px !important;
+  align-items: center;
+}
+.metamask-btn{
+  background: white;
+  border: none;
+  width: 90%;
+  padding: 15px;
+  display: flex;
+  font-size: 1.5vw;
+  gap: 20px;
+  color: blue;
+  align-items: center;
+  font-weight: 600;
+}
+.metamask-btn-logo{
+  width: 10%;
+  height: 10%;
+}
+.metamask-btn-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.modal-header {
+  border-bottom: none !important;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.modal-title {
+  order: 2;
+  margin-top: 20px !important;
+}
+.btn-close{
+  padding: 0 !important;
+  margin: 0 !important;
+  color: white !important;
+  /* background: url('./assets/closeBtn.svg') !important; */
+ filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(218deg) brightness(102%) contrast(101%);
+}
+.modal-body{
+display: flex !important;
+gap: 10px;
+flex-direction: column;
+place-items: center;
+}
+.dropdown {
   position: static !important;
-} */
+}
 /* Nav bar Style Tabash */
-/* .dropdown-menu {
+.dropdown-menu {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
   margin-top: 0px !important;
   width: 100% !important;
   text-align: center !important;
   min-height: 80px;
+
 }
 .dropdown-menu.show{
   display: inline-flex !important;
@@ -27,7 +80,7 @@
 .dropdown:hover .dropdown-menu {
   display: inline-flex;
   margin-top: 0; 
-} */
+}
 /* Nav bar Style Tabash end */
 .news marquee {
   margin-top: 12px;
@@ -153,8 +206,8 @@ overflow: hidden;
   place-items: center;
 }
 .logoRotate{
-  width: 25%;
-  height: 25%;
+  width: 30%;
+  height: 30%;
 }
 .cl1-heading{
   color: blue;
@@ -254,7 +307,7 @@ overflow: hidden;
 /* others_trade Section */
 
 .others_trade{
-  height: 140vh;
+  height: 150vh;
   width: 100%;
   background: #dbff00;
   position: relative;
@@ -275,9 +328,7 @@ color: white;
 display: flex;
 flex-direction: column;
 gap: 10px;
-position: absolute;
-top: 30%;
-left: 50%;
+margin: auto;
 }
 .trade-buttons{
   display: flex;
@@ -315,10 +366,18 @@ background: yellow;
   font-size: 1.5vw;
   font-weight: 300;
 }
+.sliderimg{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
 .knowMore{
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background: white;
+}
+.blueColunm1{
+  margin: auto;
 }
 .knowMore-heading{
   text-align: center;
@@ -331,7 +390,8 @@ background: yellow;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 40px;
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 .card1{
   display: flex;
@@ -663,4 +723,21 @@ background: yellow;
  .blue_section{
   grid-template-columns:1fr;
  }
+ .yellow-section{
+  grid-template-columns: 1fr;
+ }
+ .others_trade{
+  height: auto;
+ }
+}
+@media (max-width:800px){
+  .blue_section{
+    grid-template-columns: 1fr;
+  }
+  .card-warpper{
+    grid-template-columns: 1fr;
+  }
+  .yellow-section{
+    height: auto;
+  }
 }

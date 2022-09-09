@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Container, Col, Row, Button } from "react-bootstrap";
 
 // import Carousel from "react-bootstrap/Carousel";
@@ -19,9 +19,9 @@ import Colection from "../collections/colection";
 import TraderNo from "../traderNumbers/traderNo";
 import SliderBackground from '../../assets/sliderBackgroung.svg'
 import Logo_rotating from '../../assets/logo_rotating.gif'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from 'react-responsive-carousel';
+
 const Home = () => {
+ 
   return (
     <Container fluid className="home_container mt-5">
       <section className="home_banner">
@@ -171,7 +171,7 @@ const Home = () => {
       {/* ---------------------- */}
       <section className="home_section4">
         <Row className="justify-content-center m-0">
-          <Col xs={12} lg={5} className="text-center text-lg-start">
+          <Col xs={12} lg={5} md={12}className="text-center text-lg-start">
             <div className="mb-5">
               <p className="fw-bold" style={{ color: "#071b6f" }}>
                 Fresh Pair Of Eyes Helping Prevent Scams
@@ -199,13 +199,13 @@ const Home = () => {
             </Button>
           </Col>
 
-          <Col xs={12} lg={5} className="text-center">
+          <Col xs={12} lg={5} md={12}  className="text-center">
             <div className="mascotte_div position-relative">
               <div
                 className=""
                 style={{ position: "absolute", top: "-30%", left: "10%" }}
               >
-                <img width="90px" src={verified} alt="" />{" "}
+                <img width="90px" src={verified} />
               </div>
               <div
                 className=" text-white py-2 ps-4 pe-4"
@@ -289,17 +289,11 @@ const Home = () => {
     <section className="others_trade">
       <div className="blue_section">
          <div className="blueColunm1">
-         <Carousel axis="verticle" autoPlay='true' verticalSwipe="natural"  interval={1000} infiniteLoop={true} showIndicators={false} showThumbs={false}  showArrows={false} width='80%'>
-                {/* <marquee direction="up" width="50%" height='90%' > */}
-                
-                    <img src={SliderBackground}   />
-                    <img src={SliderBackground}   />
-                    <img src={SliderBackground}   />
-                    <img src={SliderBackground}   />
-               
-                
-                {/* </marquee> */}
-            </Carousel>
+         <marquee direction= {window.innerWidth> '900' ?"up":'left'} interval={700} width="100%">
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>
+           
+            
+         </marquee>
           </div>
          <div className="blueColunm2">
          <h1 className="trade-heading">
@@ -352,6 +346,9 @@ const Home = () => {
    </div>
    </div>
     </section>
+
+   {/* Connect Wallet Modal */}
+  
     </Container>
   );
 };
