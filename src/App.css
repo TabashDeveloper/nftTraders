@@ -10,11 +10,11 @@
 .row{
   --bs-gutter-x: 0rem !important;
 }
-.dropdown {
+/* .dropdown {
   position: static !important;
-}
+} */
 /* Nav bar Style Tabash */
-.dropdown-menu {
+/* .dropdown-menu {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)!important;
   margin-top: 0px !important;
   width: 100% !important;
@@ -27,7 +27,7 @@
 .dropdown:hover .dropdown-menu {
   display: inline-flex;
   margin-top: 0; 
-}
+} */
 /* Nav bar Style Tabash end */
 .news marquee {
   margin-top: 12px;
@@ -38,29 +38,35 @@
 /* =========== */
 
 * {
-  font-family: MuseoModerno !important;
+  font-family: MuseoModerno;
 }
 
 /* ======== home page style =========  */
 .home_banner {
-  min-height: 100vh;
+  min-height: 120vh;
   width: 100% !important;
   background-color: #332eed;
   position: relative;
-z-index: -1;
+z-index: 1;
+overflow: hidden;
 }
-/* .home_banner::after{
+.home_banner::after{
   content: "";
-  width: 80%;
-  height: 100%;
-  border-radius: 90%;
-  z-index: 0;
+  width: 90%;
+  height: 150%;
+  border-radius: 50%;
+  z-index: -1;
   position:absolute;
-  top: 20%;
-  left: 10%;
+  top: 10%;
+  left: 5%;
   background: #2001c9;
   overflow: hidden;
-} */
+}
+.header-heading{
+  font-size: 3vw;
+  font-weight: 600;
+
+}
 .home_container {
   --bs-gutter-x: unset !important;
   width: 100%;
@@ -139,7 +145,7 @@ z-index: -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
- margin-top: 40px;
+ 
 }
 .yellow-cl1{
   display: flex;
@@ -147,8 +153,8 @@ z-index: -1;
   place-items: center;
 }
 .logoRotate{
-  width: 30%;
-  height: 30%;
+  width: 25%;
+  height: 25%;
 }
 .cl1-heading{
   color: blue;
@@ -182,6 +188,10 @@ z-index: -1;
 }
 .home_section2_heading {
   color: #3e39e6;
+  font-size: 3vw !important;
+  font-weight: 600 !important;
+  max-width: 416px;
+  margin: auto;
 }
 
 .home_section4{
@@ -244,33 +254,34 @@ z-index: -1;
 /* others_trade Section */
 
 .others_trade{
-  min-height: 150vh;
+  height: 140vh;
   width: 100%;
   background: #dbff00;
+  position: relative;
 }
 .blue_section{
   background: blue;
   width: 100%;
-  min-height: 120vh;
+  height: 120vh;
   border-bottom-right-radius: 50%;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   position: relative;
+ 
 }
-.blueColunm1{
-margin: auto;
-}
+
 .blueColunm2{
-margin: auto;
 color: white;
 display: flex;
 flex-direction: column;
 gap: 10px;
+position: absolute;
+top: 30%;
+left: 50%;
 }
 .trade-buttons{
   display: flex;
   gap: 20px;
-  
 }
 .trade-history-btn{
   border: none;
@@ -279,6 +290,10 @@ gap: 10px;
   width: 40%;
   height: 20%;
   color: blue;
+  font-size: 1.2vw;
+}
+.trade-history-btn:hover{
+background: yellow;
 }
 .yout-trade-btn{
   border: none;
@@ -287,13 +302,17 @@ gap: 10px;
   width: 30%;
   height: 20%;
   color: blue;
+  font-size: 1.2vw;
+}
+.yout-trade-btn:hover{
+  background: yellow;
 }
 .trade-heading{
-  font-size: 3rem;
+  font-size: 3.5vw;
   font-weight: 600;
 }
 .trade-para{
-  font-size: 1rem;
+  font-size: 1.5vw;
   font-weight: 300;
 }
 .knowMore{
@@ -448,6 +467,10 @@ gap: 10px;
   padding: 3rem;
   max-width: 1280px;
   margin-top: 20px;
+}
+.nav-btn{
+  font-size: .875rem !important;
+  font-weight: 600 !important;
 }
 .nav-btn:hover{
   background-color: #dbff00 !important;
@@ -635,4 +658,9 @@ gap: 10px;
 
   } */
   
+}
+@media  (max-width:1024px) {
+ .blue_section{
+  grid-template-columns:1fr;
+ }
 }

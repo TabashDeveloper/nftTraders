@@ -17,12 +17,13 @@ import Guide from '../../assets/guide.svg';
 import Slider from "../carousel/carousel";
 import Colection from "../collections/colection";
 import TraderNo from "../traderNumbers/traderNo";
+import SliderBackground from '../../assets/sliderBackgroung.svg'
 import Logo_rotating from '../../assets/logo_rotating.gif'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 const Home = () => {
   return (
-    <Container fluid className="home_container">
+    <Container fluid className="home_container mt-5">
       <section className="home_banner">
         {/* <div
           className="Bubble position-relative inline-flex align-items-center justify-content-center rounded-full overflow-hidden"
@@ -45,8 +46,8 @@ const Home = () => {
         </div>*/}
        
         
-       <div className="center_text text-center">
-       <h1 className="text-white text-center" >
+       <div className="center_text text-center mt-5" >
+       <h1 className="text-white header-heading" >
           Swap Your Digital Assets More Secure, More Social
         </h1>
         <button className="rounded-pill border-0 p-3 mt-4 text-primary" type="button">Create Trade</button>
@@ -62,29 +63,29 @@ const Home = () => {
       </section>
       {/* -------------------------------- */}
       <section className="home_section2 pt-5">
-        <h2 className="home_section2_heading text-center mt-5 fw-bold">
+        <h2 className="home_section2_heading text-center mt-5">
           Trade NFTs & Crypto Like a Boss
         </h2>
 
-        <Row className="m-0 justify-content-center align-items-center">
-          <Col xl={4} className="text-center">
+        <Row className="mt-4 justify-content-center align-items-center">
+          <Col lg={4} md={3} sm={3} xs={3} className="text-center">
             <div className="home_section2_gif">
               <img width="70%" className="rounded-circle images" src={gif2} alt="" />
             </div>
           </Col>
-          <Col xl={3}>
+          <Col lg={3} md={3} sm={3} xs={3}>
             <div className="home_section2_gif_div text-center align-items-center">
               <img width="10%" className="mb-4" src={logo} alt="" />
-              <p style={{ color: "#3e39e6" }}>NFT Trader Protocol</p>
+              <p style={{ color: "#3e39e6",fontFamily:'Rubik', fontSize:'.75rem' }}>NFT Trader Protocol</p>
             </div>
           </Col>
-          <Col lg={4} className="text-center">
+          <Col lg={4} md={3} sm={3} xs={3} className="text-center">
             <div className="home_section2_gif1">
               <img width="70%" className="rounded-circle images" src={gif1} alt="" />
             </div>
           </Col>
         </Row>
-        <p className="text-center mt-5 mt-md-0" style={{ marginTop: "-10px" }}>
+        <p className="text-center mt-5 mt-md-0" style={{ marginTop: "-10px", fontSize:'2vw' }}>
           Our protocol is totally on-chain, data is totally accessible.
         </p>
       </section>
@@ -288,19 +289,16 @@ const Home = () => {
     <section className="others_trade">
       <div className="blue_section">
          <div className="blueColunm1">
-         <Carousel axis="verticle" autoPlay='true' verticalSwipe="natural"  interval={2000} infiniteLoop={true} showIndicators={false} showThumbs={false}  showArrows={false} width={400} >
-                <div>
-                    <img src={img8} />
-                </div>
-                <div>
-                    <img src={img2} />
-                    
-                </div>
-                <div>
-                    <img src={img3} />
-                </div>
+         <Carousel axis="verticle" autoPlay='true' verticalSwipe="natural"  interval={1000} infiniteLoop={true} showIndicators={false} showThumbs={false}  showArrows={false} width='80%'>
+                {/* <marquee direction="up" width="50%" height='90%' > */}
+                
+                    <img src={SliderBackground}   />
+                    <img src={SliderBackground}   />
+                    <img src={SliderBackground}   />
+                    <img src={SliderBackground}   />
                
                 
+                {/* </marquee> */}
             </Carousel>
           </div>
          <div className="blueColunm2">

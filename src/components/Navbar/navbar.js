@@ -2,7 +2,6 @@ import React from 'react'
 import { Button, NavLink, Dropdown } from 'react-bootstrap'
 import logo from '../../assets/images/logo.svg'
 import './navbar.css';
-
 import { Link } from 'react-router-dom';
 const Navbar = ({connectWallet}) => {
   return (
@@ -38,8 +37,8 @@ const Navbar = ({connectWallet}) => {
       </Dropdown>
       </div>
       <div class="d-flex gap-2" role="search">
-      <Button className='text-primary bg-white rounded-pill h5 nav-btn ' variant="outline-primary">BUY CRYPTO</Button>
-      <Button className='text-primary bg-white rounded-pill h5 nav-btn' variant="outline-primary" onClick={connectWallet}>CONNECT WALLET</Button>
+      <Button className='text-primary bg-white rounded-pill  nav-btn ' variant="outline-primary">Buy Crypto</Button>
+      <Button className='text-primary bg-white rounded-pill  nav-btn' variant="outline-primary" onClick={connectWallet}>Connect Wallet</Button>
       </div>
     </div>
   </nav>
