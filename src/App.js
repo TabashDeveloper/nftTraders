@@ -17,8 +17,8 @@ function App() {
 
   return (
     <div className="App">
-    <Navbar  connectWallet={connectWallet}/>
-      
+    {/* <Navbar  connectWallet={connectWallet}/> */}
+      <Nav1/>
       <Routes>
       <Route path='/' element={<Home/>}/>
         <Route path='/Mytrades' element={<Mytrades wallet={wallet}/>}/>

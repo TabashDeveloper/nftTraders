@@ -19,11 +19,11 @@ import Colection from "../collections/colection";
 import TraderNo from "../traderNumbers/traderNo";
 import SliderBackground from '../../assets/sliderBackgroung.svg'
 import Logo_rotating from '../../assets/logo_rotating.gif'
-
+import TradingProtocl from '../../layout/tradingProtocol/Index';
 const Home = () => {
  
   return (
-    <Container fluid className="home_container mt-5">
+    <Container fluid className="home_container ">
       <section className="home_banner">
         {/* <div
           className="Bubble position-relative inline-flex align-items-center justify-content-center rounded-full overflow-hidden"
@@ -138,7 +138,7 @@ const Home = () => {
       </section>
       {/* -------------------------- */}
       {/* marquee tag section  */}
-      <section className="mt-5 mb-5">
+      <section className="mt-5 mb-1">
         <Container fluid className="home_container">
           
 
@@ -149,7 +149,7 @@ const Home = () => {
                 width: "500px",
                 background: "#0c0a41",
                 padding: "40px 50px 40px 50px",
-                zIndex: "9999",
+                zIndex: "9",
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
@@ -170,7 +170,7 @@ const Home = () => {
       </section>
       {/* ---------------------- */}
       <section className="home_section4">
-        <Row className="justify-content-center m-0">
+        {/* <Row className="justify-content-center m-0">
           <Col xs={12} lg={5} md={12}className="text-center text-lg-start">
             <div className="mb-5">
               <p className="fw-bold" style={{ color: "#071b6f" }}>
@@ -222,7 +222,8 @@ const Home = () => {
               
             </div>
           </Col>
-        </Row>
+        </Row> */}
+        <TradingProtocl/>
       </section>
       {/* ----------------------------- */}
 
@@ -289,11 +290,23 @@ const Home = () => {
     <section className="others_trade">
       <div className="blue_section">
          <div className="blueColunm1">
-         <marquee direction= {window.innerWidth> '900' ?"up":'left'} interval={700} width="100%">
-            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>
-           
+         <marquee direction= {window.innerWidth> '900' ?"up":'left'} >
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
+            <div className="mb-3"> <img src={SliderBackground} className="sliderimg"/></div>     
             
          </marquee>
+        {/* <div className="marquee">
+          <img src={SliderBackground} className="sliderimg"/>
+          <img src={SliderBackground} className="sliderimg"/>
+          <img src={SliderBackground} className="sliderimg"/>
+          <img src={SliderBackground} className="sliderimg"/>
+        </div> */}
           </div>
          <div className="blueColunm2">
          <h1 className="trade-heading">

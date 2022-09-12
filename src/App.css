@@ -72,14 +72,19 @@ place-items: center;
   width: 100% !important;
   text-align: center !important;
   min-height: 80px;
-
+  color: #1636b8 !important;
+}
+.nav-link{
+  color: #fff !important;
 }
 .dropdown-menu.show{
   display: inline-flex !important;
+  color: #1636b8 !important;
 }
 .dropdown:hover .dropdown-menu {
   display: inline-flex;
   margin-top: 0; 
+  color: #1636b8 !important;
 }
 /* Nav bar Style Tabash end */
 .news marquee {
@@ -248,16 +253,18 @@ overflow: hidden;
 }
 
 .home_section4{
-  background-image: url('./assets/images/bg2.svg');
-  /* min-height: 70vh; */
+  /* background-image: url('./assets/images/bg2.svg');
+   min-height: 70vh; 
   padding-top: 170px;
   padding-bottom: 170px;  
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%, 100%
+  background-size: cover; */
+width: 100%;
+height: 100vh;
 }
 .mascotte_div{
-  background-image: url('./assets/images/mascotte.svg');
+   background-image: url('./assets/images/mascotte.svg');
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -341,7 +348,8 @@ margin: auto;
   width: 40%;
   height: 20%;
   color: blue;
-  font-size: 1.2vw;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .trade-history-btn:hover{
 background: yellow;
@@ -353,7 +361,8 @@ background: yellow;
   width: 30%;
   height: 20%;
   color: blue;
-  font-size: 1.2vw;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .yout-trade-btn:hover{
   background: yellow;
@@ -367,8 +376,8 @@ background: yellow;
   font-weight: 300;
 }
 .sliderimg{
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 .knowMore{
@@ -377,7 +386,10 @@ background: yellow;
   background: white;
 }
 .blueColunm1{
-  margin: auto;
+  /* width: 100%;
+  height: 100%; */
+  overflow: hidden;
+  margin-left: 30%;
 }
 .knowMore-heading{
   text-align: center;
@@ -444,11 +456,11 @@ background: yellow;
   width: 192px !important;
 }
 .navbar-nav a{
-  color: #fff !important;
+  /* color: #fff !important; */
 }
-.navbar-nav a:hover{
+/* .navbar-nav a:hover{
   color: rgb(219 255 0) !important;
-}
+} */
 .bg-yellow{
   background-color: rgb(219 255 0) !important;
 }
@@ -729,6 +741,9 @@ background: yellow;
  .others_trade{
   height: auto;
  }
+.home_section4{
+  height: 200vh;
+}
 }
 @media (max-width:800px){
   .blue_section{
@@ -740,4 +755,21 @@ background: yellow;
   .yellow-section{
     height: auto;
   }
+}
+
+.marquee {
+  display: flex;
+  flex-direction: column;
+  animation-name: marquee;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  /* transform: translateY(0); */
+ 
+}
+
+@keyframes marquee {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-100%);}
 }
